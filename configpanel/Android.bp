@@ -7,6 +7,10 @@
 android_app {
     name: "ConfigPanel",
 
+    dex_preopt: {
+        enabled: false,
+    },
+
     srcs: ["src/**/*.java"],
     resource_dirs: ["res"],
     certificate: "platform",

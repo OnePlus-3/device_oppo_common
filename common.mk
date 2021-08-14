@@ -25,6 +25,9 @@ PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 PRODUCT_PACKAGES += \
     ConfigPanel
 
+# never dexopt the keyhandler
+$(call add-product-dex-preopt-module-config,ConfigPanel,disable)
+
 # Recovery
 PRODUCT_PACKAGES += \
     librecovery_updater_oppo
